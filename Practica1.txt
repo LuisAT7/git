@@ -1,0 +1,7 @@
+curl  --url 'https://www.virustotal.com/vtapi/v2/file/scan'   --form 'apikey=c8bc676be364120aed9ba90c779df31f13088423c7f55d9110e727f045dae84d'   --form 'file=@/home/trejo/Escritorio/Prueba/'
+
+
+curl --request POST --url 'https://www.virustotal.com/vtapi/v2/url/scan' --data 'apikey=c8bc676be364120aed9ba90c779df31f13088423c7f55d9110e727f045dae84d' --data 'url=https://www.facebook.com/'
+
+
+curl --request POST --url 'https://www.virustotal.com/vtapi/v2/url/scan' --data 'apikey=c8bc676be364120aed9ba90c779df31f13088423c7f55d9110e727f045dae84d' --data 'url=https://www.twitter.com/'
