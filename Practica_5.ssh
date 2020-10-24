@@ -1,0 +1,49 @@
+#!/bin/bash
+arch1=$(find /home/trejo -name msg.txt)
+separador=$(md5sum $arch1)
+IFS1=' '
+read -a var1 <<< "$separador"
+echo "Primer imagen "
+if [ "40744679dff4bf36705c00f9cb815579" == $var1 ];
+then
+echo "Imagen Original"
+cat $arch1 | base64 msg.txt > msg1.txt
+else
+echo "Archivo Corrupto :("
+fi
+arch2=$(find /home/trejo -name fcfm.png)
+separador=$(md5sum $arch2)
+IFS2=' '
+read -a var2 <<< "$separador"
+echo "Segunda imagen"
+if [ "4260808329804b5f553cf3e3d5a446c6" == $var2 ];
+then
+echo "Imagen Original"
+cat $arch2 | base64 fcfm.png > fcfm.png
+else
+echo "Archivo Corrupto :("
+fi
+arch3=$(find /home/trejo -name mystery_img1.txt)
+separador=$(md5sum $arch3)
+IFS3=' '
+read -a var3 <<< "$separador"
+echo "Tercer imagen"
+if [ "5db9862819edb16f9ac0f3b1c406e79d" == $var3 ];
+then
+echo "Imagen Original"
+cat $arch3 | base64 --decode mystery_img1.txt > mystery_img11.png
+else
+echo "Archivo Corrupto:("
+fi
+arch4=$(find /home/trejo -name mystery_img2.txt)
+separador=$(md5sum $arch4)
+IFS1=' '
+read -a var4 <<< "$separador"
+echo "Cuarta imagen"
+if [ "b091a841da98ca516635f4dfea1dbaf5" == $var4 ];
+then
+echo "Imagen Original"
+cat $arch4 | base64 --decode mystery_img2.txt > mystery_img22.png
+else
+echo "Archivo Corrupto:("
+fi
