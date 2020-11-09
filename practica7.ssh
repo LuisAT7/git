@@ -1,0 +1,13 @@
+
+#!/bin/bash
+#Luis Alberto Trejo Tovar
+
+hostname -I
+
+curl ifconfig.me
+
+nmap 10.2.2.15 > resultado.txt
+
+nmap 187.190.18.10 >> resultado.txt
+
+nmap --script=vuln scanme.nmap.org >> resultado.txt
