@@ -1,5 +1,5 @@
 #!/bin/bash
-#Luis Alberto TRejo Tovar 1815758
+#Luis Alberto Trejo Tovar 1815758
 mail=$1
 function py { python3 -c "$1" ; }
 
@@ -18,7 +18,7 @@ with open('pass.json') as f:
 # create message object instance
 msg = MIMEMultipart()
 
-mensaje = 'Profe lo quiero, no me repruebe jeje'
+mensaje = 'Profe lo quiero mucho, no me repruebe jeje'
 
 # setup the parameters of the message
 msg['From'] = data['user']
