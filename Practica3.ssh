@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Luis Alberto Trejo Tovar   1815758
+
+#Script para buscar puertos y despues lo guarda en un txt
+#Se ingresa dominio a sondear, puerto que se quiere verificar y si es tcp o sdp 
+ip=$1
+puerto=$2
+sondeo=$3
+
+function sondeoip {
+	if [ "$sip" = "tcp" ]; then 
+		nmap -sS $ip | grep $puerto > stcp.txt
+	elif [ "$sip" = "udp" ]; then
+		nmap -sU $ip | grep $puerto > sdp.txt
+	fi
+
+}
+
+sondeoip
+
+
